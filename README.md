@@ -7,6 +7,7 @@ CREATE TABLE team(
 	manager_id INT,
 	FOREIGN KEY(manager_id) REFERENCES developer(dev_id) ON DELETE SET NULL
 );
+
 CREATE TABLE developer(
 	dev_id INT PRIMARY KEY,
 	first_name VARCHAR(20),
@@ -17,12 +18,14 @@ CREATE TABLE developer(
 	teamleader_id INT,
 	team_id INT
 );
+
 CREATE TABLE project(
 	project_id INT PRIMARY KEY,
 	project_name VARCHAR(20),
 	team_id INT,
 	FOREIGN KEY(team_id) REFERENCES team(team_id) ON DELETE SET NULL
 );
+
 CREATE TABLE assigned_to(
 	dev_id INT,
 	project_id INT,
@@ -31,6 +34,7 @@ CREATE TABLE assigned_to(
 	FOREIGN KEY(dev_id) REFERENCES developer(dev_id) ON DELETE CASCADE,
 	FOREIGN KEY(project_id) REFERENCES project(project_id) ON DELETE CASCADE
 );
+
 CREATE TABLE investor(
 	team_id INT,
 	inverstor_name VARCHAR(20),
