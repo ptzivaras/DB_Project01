@@ -47,3 +47,6 @@ CREATE TABLE investor(
 
 INSERT INTO developer ( dev_id , first_name , last_name, age , gender, salary , teamleader_id , team_id  )
 VALUES( 0, 'gaben', 'Newel',  54, 'male', 750, NULL, NULL);
+
+select *
+FROM developer;
