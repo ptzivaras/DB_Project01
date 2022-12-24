@@ -1,5 +1,7 @@
-# DB_Project01
+# DB_Project01, Steps
 
+
+# Step 01, CRUD operations using PGADMIN
 CREATE TABLE team(
 	team_id INT PRIMARY KEY,
 	team_name VARCHAR(20),
